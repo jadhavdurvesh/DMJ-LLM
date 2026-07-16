@@ -1,0 +1,5 @@
+{"instruction":"Print Hello World in DMJScript","response":"print(\"Hello World\");"}
+{"instruction":"Create an integer variable","response":"let age = 18;"}
+{"instruction":"Create an array of numbers","response":"array nums = [1, 2, 3, 4, 5];"}
+{"instruction":"Turn on LED at pin 13","response":"pin led = 13;\nhigh(led);"}
+{"instruction":"Turn off LED at pin 13","response":"pin led = 13;\nlow(led);"}
