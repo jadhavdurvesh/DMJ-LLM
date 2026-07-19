@@ -10,15 +10,7 @@
 
 *A lightweight, open-source engineering-focused Large Language Model built for students, makers, developers, and researchers.*
 
-<br>
 
-![GitHub Stars](https://img.shields.io/github/stars/jadhavdurvesh/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
-
-![GitHub Forks](https://img.shields.io/github/forks/jadhavdurvesh/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
-
-![GitHub Issues](https://img.shields.io/github/issues/jadhavdurvesh/DMJ-LLM?style=for-the-badge)
-
-![GitHub License](https://img.shields.io/github/license/jadhavdurvesh/DMJ-LLM?style=for-the-badge)
 
 <br>
 
