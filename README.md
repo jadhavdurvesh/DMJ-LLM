@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🤖 DMJ LLM
+#  DMJ LLM
 
 ### Engineering • Robotics • Embedded Systems • Programming • Artificial Intelligence
 
@@ -12,10 +12,13 @@
 
 <br>
 
-![GitHub stars](https://img.shields.io/github/stars/DMJ-Group/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
-![GitHub forks](https://img.shields.io/github/forks/DMJ-Group/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
-![GitHub issues](https://img.shields.io/github/issues/DMJ-Group/DMJ-LLM?style=for-the-badge)
-![GitHub License](https://img.shields.io/github/license/DMJ-Group/DMJ-LLM?style=for-the-badge)
+![GitHub Stars](https://img.shields.io/github/stars/jadhavdurvesh/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
+
+![GitHub Forks](https://img.shields.io/github/forks/jadhavdurvesh/DMJ-LLM?style=for-the-badge&logo=github&color=blue)
+
+![GitHub Issues](https://img.shields.io/github/issues/jadhavdurvesh/DMJ-LLM?style=for-the-badge)
+
+![GitHub License](https://img.shields.io/github/license/jadhavdurvesh/DMJ-LLM?style=for-the-badge)
 
 <br>
 
