@@ -8,7 +8,7 @@
 
 ### Engineering • Robotics • Embedded Systems • Programming • Artificial Intelligence
 
-*A lightweight, open-source engineering-focused Large Language Model built for students, makers, developers, and researchers.*
+*An open-source engineering-focused Large Language Model (LLM) designed for programming, robotics, embedded systems, electronics, and artificial intelligence.*
 <p align="center">
 
 <a href="https://huggingface.co/Durveshjadhav/DMJ-LLM-v1"><img src="https://img.shields.io/badge/Hugging%20Face-Model-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" /></a>
