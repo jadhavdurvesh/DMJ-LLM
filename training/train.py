@@ -1,10 +1,8 @@
 from transformers import TrainingArguments
-
 from trl import SFTTrainer
 
 from config import (
     OUTPUT_DIR,
-    LOG_DIR,
 )
 
 from dataset import load_dataset
@@ -34,13 +32,12 @@ def main():
     dataset = format_dataset(dataset)
 
     print("\nLoading model...")
-    model, tokenizer = build_model()
+    model, tokenizer, peft_config = build_model()
 
     print("\nCreating training arguments...")
 
     training_args = TrainingArguments(
         output_dir=str(OUTPUT_DIR),
-        overwrite_output_dir=True,
 
         num_train_epochs=EPOCHS,
 
@@ -71,12 +68,13 @@ def main():
 
     print("\nCreating trainer...")
 
-   trainer = SFTTrainer(
-    model=model,
-    args=training_args,
-    train_dataset=dataset,
-    processing_class=tokenizer,
-)
+    trainer = SFTTrainer(
+        model=model,
+        processing_class=tokenizer,
+        train_dataset=dataset,
+        args=training_args,
+        peft_config=peft_config,
+    )
 
     print("\nStarting training...\n")
 
@@ -85,7 +83,6 @@ def main():
     print("\nSaving model...")
 
     trainer.save_model(str(OUTPUT_DIR))
-
     tokenizer.save_pretrained(str(OUTPUT_DIR))
 
     print("\nTraining complete!")

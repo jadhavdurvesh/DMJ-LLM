@@ -1,11 +1,14 @@
 import torch
 
-from transformers import AutoModelForCausalLM
-from transformers import AutoTokenizer
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+)
 
-from peft import LoraConfig
-from peft import get_peft_model
-from peft import prepare_model_for_kbit_training
+from peft import (
+    LoraConfig,
+    get_peft_model,
+)
 
 from model_config import (
     MODEL_NAME,
@@ -43,15 +46,13 @@ def load_model():
         trust_remote_code=True,
     )
 
+    model.config.use_cache = False
+
     return model
 
 
-def apply_lora(model):
-    print("Applying LoRA...")
-
-    model = prepare_model_for_kbit_training(model)
-
-    peft_config = LoraConfig(
+def get_lora_config():
+    return LoraConfig(
         r=LORA_R,
         lora_alpha=LORA_ALPHA,
         lora_dropout=LORA_DROPOUT,
@@ -60,18 +61,16 @@ def apply_lora(model):
         task_type="CAUSAL_LM",
     )
 
-    model = get_peft_model(model, peft_config)
-
-    model.print_trainable_parameters()
-
-    return model
-
 
 def build_model():
     tokenizer = load_tokenizer()
 
     model = load_model()
 
-    model = apply_lora(model)
+    peft_config = get_lora_config()
 
-    return model, tokenizer
+    model = get_peft_model(model, peft_config)
+
+    model.print_trainable_parameters()
+
+    return model, tokenizer, peft_config
