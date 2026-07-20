@@ -1,11 +1,89 @@
-MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
+"""
+DMJ LLM Model Configuration
+===========================
 
-OUTPUT_DIR = "./models/dmj-llm-v1"
+This file contains all model-specific configuration,
+LoRA settings, and training hyperparameters.
+"""
 
-MAX_LENGTH = 512
+# ============================================================
+# Base Model
+# ============================================================
+
+MODEL_NAME = "Qwen/Qwen2.5-1.5B"
+
+# ============================================================
+# Sequence Length
+# ============================================================
+
+MAX_SEQ_LENGTH = 2048
+
+# ============================================================
+# Training Hyperparameters
+# ============================================================
 
 EPOCHS = 3
 
-BATCH_SIZE = 4
-
 LEARNING_RATE = 2e-4
+
+TRAIN_BATCH_SIZE = 2
+
+EVAL_BATCH_SIZE = 2
+
+GRADIENT_ACCUMULATION_STEPS = 8
+
+WEIGHT_DECAY = 0.01
+
+WARMUP_RATIO = 0.03
+
+LR_SCHEDULER = "cosine"
+
+# ============================================================
+# LoRA Configuration
+# ============================================================
+
+LORA_R = 16
+
+LORA_ALPHA = 32
+
+LORA_DROPOUT = 0.05
+
+LORA_BIAS = "none"
+
+TARGET_MODULES = [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj",
+]
+
+# ============================================================
+# Saving
+# ============================================================
+
+SAVE_STRATEGY = "steps"
+
+SAVE_STEPS = 500
+
+SAVE_TOTAL_LIMIT = 3
+
+# ============================================================
+# Logging
+# ============================================================
+
+LOGGING_STEPS = 10
+
+# ============================================================
+# Evaluation
+# ============================================================
+
+EVALUATION_STRATEGY = "no"
+
+# ============================================================
+# Random Seed
+# ============================================================
+
+SEED = 42

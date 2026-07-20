@@ -1,0 +1,25 @@
+model:
+  name: Qwen/Qwen2.5-1.5B
+  max_seq_length: 2048
+
+training:
+  epochs: 3
+  learning_rate: 0.0002
+  batch_size: 2
+  gradient_accumulation: 8
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  scheduler: cosine
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+
+save:
+  steps: 500
+  limit: 3
+
+logging:
+  steps: 10

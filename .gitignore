@@ -1,0 +1,17 @@
+# Training datasets
+datasets/*.jsonl
+
+# Model outputs
+models/
+
+# Training checkpoints
+training/checkpoints/
+
+# Logs
+training/logs/
+
+# Cache
+training/cache/
+
+__pycache__/
+*.pyc
