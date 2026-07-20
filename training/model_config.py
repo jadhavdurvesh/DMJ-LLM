@@ -2,8 +2,7 @@
 DMJ LLM Model Configuration
 ===========================
 
-This file contains all model-specific configuration,
-LoRA settings, and training hyperparameters.
+Model, LoRA and training configuration.
 """
 
 # ============================================================
@@ -13,13 +12,13 @@ LoRA settings, and training hyperparameters.
 MODEL_NAME = "Qwen/Qwen2.5-1.5B"
 
 # ============================================================
-# Sequence Length
+# Sequence
 # ============================================================
 
 MAX_SEQ_LENGTH = 2048
 
 # ============================================================
-# Training Hyperparameters
+# Training
 # ============================================================
 
 EPOCHS = 3
@@ -39,7 +38,7 @@ WARMUP_RATIO = 0.03
 LR_SCHEDULER = "cosine"
 
 # ============================================================
-# LoRA Configuration
+# LoRA
 # ============================================================
 
 LORA_R = 16
@@ -83,7 +82,15 @@ LOGGING_STEPS = 10
 EVALUATION_STRATEGY = "no"
 
 # ============================================================
-# Random Seed
+# Precision
+# ============================================================
+
+USE_FP16 = True
+
+USE_BF16 = False
+
+# ============================================================
+# Seed
 # ============================================================
 
 SEED = 42
